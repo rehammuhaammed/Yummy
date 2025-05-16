@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/main.css" />
+    <title>document</title>
+  </head>
+  <body>
+    <div class="loading">
+      <span class="loader"> </span>
+    </div>
+    <div class="sidebar">
+      <div
+        class="leftside bg-black p-4 d-flex flex-column justify-content-between"
+      >
+        <ul class="d-flex flex-column gap-3 p-1 linkes">
+          <li id="Search">Search</li>
+          <li id="Categories">Categories</li>
+          <li id="Area">Area</li>
+          <li id="Ingredients">Ingredient</li>
+          <li id="ContactUs">Contact Us</li>
+        </ul>
+
+        <div class="copyright">
+          <ul class="d-flex gap-2 p-0 m-0">
+            <li><i class="fa-brands fa-facebook"></i></li>
+            <li><i class="fa-brands fa-twitter"></i></li>
+            <li><i class="fa-solid fa-globe"></i></li>
+          </ul>
+          <p class="m-0">Copyright Â© 2019 All Rights Reserved.</p>
+        </div>
+      </div>
+      <div
+        class="iconside bg-white d-flex flex-column justify-content-between align-items-center py-3 px-2"
+      >
+        <div class="yummy">
+          <img class="logo" src="images/logo.png" alt="" srcset="" />
+        </div>
+
+        <div class="bar">
+          <i
+            class="baricon fa-solid open-close-icon fa-2x fa-align-justify"
+          ></i>
+        </div>
+
+        <div class="share">
+          <i class="fa-solid fa-globe d-block"></i>
+          <i class="fa-solid fa-share-nodes"></i>
+        </div>
+      </div>
+    </div>
+
+    <!--home  -->
+    <div id="Home" class="container">
+      <div class="rowData row row-cols-1 row-cols-md-4 py-5 g-4"></div>
+    </div>
+
+    <!-- search -->
+    <div class="searchsec">
+      <div class="container  py-4 w-75">
+        <div class="inputs d-flex gap-4">
+          <input
+            id="searchName"
+            oninput="searchByname()"
+            type="text"
+            class="form-control bg-transparent text-white"
+            placeholder="Search By Name"
+          />
+          <input
+            id="searchLetter"
+            oninput="searchByletter()"
+            type="text"
+            class="form-control bg-transparent text-white"
+            maxlength="1"
+            placeholder="Search By First Letter"
+          />
+        </div>
+      </div>
+      <div class="container position-relative min-vh-100">
+         <div class="inner-loader loading">
+            <span class="loader"> </span>
+        </div>
+        <div class="searchRowData position-relative  row min-vh-100 row-cols-1 row-cols-md-4 py-5 g-4">
+        
+        </div>
+      </div>
+    </div>
+
+    <!-- details  -->
+    <div class="details">
+      <div class="container position-relative text-white">
+        <div class="inner-loader loading">
+            <span class="loader"> </span>
+        </div>
+        <div class="row py-5 g-4">
+          <div class="col-md-4">
+            <div class="inner">
+              <div class="image">
+                <img class="w-100 rounded-1" alt="" />
+                <h2></h2>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-8">
+            <div class="data">
+              <h2>Instructions</h2>
+              <p></p>
+
+              <h3>
+                <span>Area : </span>
+                <span class="area"> </span>
+              </h3>
+              <h3>
+                <span>Category : </span>
+                <span class="CategoryName"> </span>
+              </h3>
+
+              <h3>Recipes :</h3>
+              <ul class="list-unstyled d-flex g-3 flex-wrap recipes"></ul>
+              <h3>Tags :</h3>
+              <ul class="list-unstyled d-flex g-3 tags"></ul>
+
+              <button class="btn btn-success">
+                <a
+                  class="text-decoration-none text-white source"
+                  target="_blank"
+                  >Source</a
+                >
+              </button>
+              <button class="btn btn-danger">
+                <a
+                  class="text-decoration-none text-white youtube"
+                  target="_blank"
+                  >Youtube</a
+                >
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- categories -->
+    <div class="categories">
+      <div class="container position-relative ">
+        <div class="inner-loader loading">
+            <span class="loader"> </span>
+        </div>
+        <div class="categoriesRowData row row-cols-1 row-cols-md-4 py-5 g-4"></div>
+      </div>
+    </div>
+
+    <!-- categoriesDetails -->
+    <div class="categoriesDetails">
+      <div class="container">
+        <div class="inner-loader loading">
+            <span class="loader"> </span>
+        </div>
+        <div
+          class="categoriesDetailsRow row row-cols-1 row-cols-md-4 py-5 g-4"
+        ></div>
+      </div>
+    </div>
+
+    <!-- areaSec  -->
+
+    <div class="area">
+      <div class="container">
+        <div class="inner-loader loading">
+            <span class="loader"> </span>
+        </div>
+        <div class="areaRow row row-cols-1 row-cols-md-4 py-5 g-4"></div>
+      </div>
+    </div>
+
+    <!-- areaDetails -->
+    <div class="areaDetails">
+      <div class="container">
+        <div class="inner-loader loading">
+            <span class="loader"> </span>
+        </div>
+        <div class="areaDetailsRow row row-cols-1 row-cols-md-4 py-5 g-4"></div>
+      </div>
+    </div>
+
+    <!-- Ingredient sec -->
+    <div class="ingredient">
+      <div class="container">
+        <div class="inner-loader loading">
+            <span class="loader"> </span>
+        </div>
+        <div class="ingredientRow row row-cols-1 row-cols-md-4 py-5 g-4"></div>
+      </div>
+    </div>
+
+    <!-- IngredientDetails -->
+    <div class="IngredientDetails">
+      <div class="container">
+        <div class="inner-loader loading">
+            <span class="loader"> </span>
+        </div>
+        <div
+          class="IngredientDetailsRow row row-cols-1 row-cols-md-4 py-5 g-4"
+        ></div>
+      </div>
+    </div>
+
+    <!-- contactUs ces -->
+    <div class="contactUs">
+      <div class="container">
+        <div class="row row-cols-1 row-cols-md-2 g-4 p-5 pb-0">
+          <div class="col">
+            <div class="inner">
+              <input
+                id="Name"
+                type="text"
+                class="form-control"
+                placeholder="Enter Your Name"
+              />
+              <div class="alert alert-danger w-100 mt-2 d-none">
+                Special characters and numbers not allowed
+              </div>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="inner">
+              <input
+                id="Email"
+                type="text"
+                class="form-control"
+                placeholder="Enter Your Email"
+              />
+              <div class="alert alert-danger w-100 mt-2 d-none">
+                Email not valid *exemple@yyy.zzz
+              </div>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="inner">
+              <input
+                id="Phone"
+                type="text"
+                class="form-control"
+                placeholder="Enter Your Phone"
+              />
+              <div class="alert alert-danger w-100 mt-2 d-none">
+                Enter valid Phone Number must be 15 digits
+              </div>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="inner">
+              <input
+                id="Age"
+                type="number"
+                class="form-control"
+                placeholder="Enter Your Age"
+              />
+              <div class="alert alert-danger w-100 mt-2 d-none">
+                Enter valid age
+              </div>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="inner">
+              <input
+                id="Password"
+                type="password"
+                class="form-control"
+                placeholder="Enter Your Password"
+              />
+              <div class="alert alert-danger w-100 mt-2 d-none">
+                Enter valid password *Minimum 8 characters, at least one letter
+                and one number:*
+              </div>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="inner">
+              <input
+                id="Repassword"
+                type="password"
+                class="form-control"
+                placeholder="Repassword"
+              />
+              <div class="alert alert-danger w-100 mt-2 d-none">
+                Passwords do not match
+              </div>
+            </div>
+          </div>
+        </div>
+        <button
+          id="submitBtn"
+          class="btn btn-outline-danger px-2 mt-3 disabled"
+        >
+          Submit
+        </button>
+      </div>
+    </div>
+
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

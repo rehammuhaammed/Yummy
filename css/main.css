@@ -1,0 +1,238 @@
+body {
+  background-color: black;
+  position: relative;
+  overflow: hidden;
+}
+ul {
+  list-style: none;
+}
+i {
+  cursor: pointer;
+}
+li {
+  cursor: pointer;
+}
+
+
+
+.sidebar {
+  min-height: 100vh;
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1111;
+  color: white;
+}
+.sidebar .yummy {
+  cursor: pointer;
+}
+.sidebar .leftside {
+  width: 66%;
+}
+.sidebar .leftside .linkes {
+  position: relative;
+}
+.sidebar .leftside .linkes li {
+  position: relative;
+  /* top: 300px; */
+}
+.sidebar .iconside .logo {
+  width: 50px;
+}
+.sidebar .iconside i {
+  color: black;
+}
+.inner {
+  position: relative;
+  overflow: hidden;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.inner .layer {
+  width: 100%;
+  height: 100%;
+  background-color: #f9f6f6ca;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  z-index: 1;
+  top: 100%;
+  left: 0;
+
+  transition: all 0.5s;
+}
+.inner:hover .layer {
+  top: 0;
+}
+
+.searchsec {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: none;
+}
+.inputs input::placeholder {
+  color: #6c757d;
+}
+
+.details {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: none;
+}
+
+.inner .meal-layer {
+  width: 100%;
+  height: 100%;
+  background-color: #f9f6f6ca;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+  top: 100%;
+  left: 0;
+  transition: all 0.5s;
+}
+.inner:hover .meal-layer {
+  top: 0;
+}
+
+.categories {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: none;
+}
+.categoriesDetails {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: none;
+}
+
+.area {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: none;
+}
+.areaDetails{
+  display: none;
+}
+.ingredient {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: none;
+}
+.IngredientDetails{
+  display: none;
+}
+.contactUs {
+  min-height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: none;
+}
+.contactUs .container {
+  text-align: center;
+  padding: 3rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.loading{
+  height: 100vh;
+  position: fixed;
+  left: 0;
+  top: 0;
+  right:0;
+  background-color: #000000;
+  z-index: 1545487;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.inner-loader {
+  position: absolute;
+  width: 100%;
+  background-color: rgba(0,0,0,0.5); 
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.loader {
+  color: #fff;
+  font-size: 10px;
+  width: 1em;
+  height: 1em;
+  border-radius: 50%;
+  position: relative;
+  text-indent: -9999em;
+  animation: mulShdSpin 1.3s infinite linear;
+  transform: translateZ(0);
+}
+
+@keyframes mulShdSpin {
+  0%,
+  100% {
+    box-shadow: 0 -3em 0 0.2em, 
+    2em -2em 0 0em, 3em 0 0 -1em, 
+    2em 2em 0 -1em, 0 3em 0 -1em, 
+    -2em 2em 0 -1em, -3em 0 0 -1em, 
+    -2em -2em 0 0;
+  }
+  12.5% {
+    box-shadow: 0 -3em 0 0, 2em -2em 0 0.2em, 
+    3em 0 0 0, 2em 2em 0 -1em, 0 3em 0 -1em, 
+    -2em 2em 0 -1em, -3em 0 0 -1em, 
+    -2em -2em 0 -1em;
+  }
+  25% {
+    box-shadow: 0 -3em 0 -0.5em, 
+    2em -2em 0 0, 3em 0 0 0.2em, 
+    2em 2em 0 0, 0 3em 0 -1em, 
+    -2em 2em 0 -1em, -3em 0 0 -1em, 
+    -2em -2em 0 -1em;
+  }
+  37.5% {
+    box-shadow: 0 -3em 0 -1em, 2em -2em 0 -1em,
+     3em 0em 0 0, 2em 2em 0 0.2em, 0 3em 0 0em, 
+     -2em 2em 0 -1em, -3em 0em 0 -1em, -2em -2em 0 -1em;
+  }
+  50% {
+    box-shadow: 0 -3em 0 -1em, 2em -2em 0 -1em,
+     3em 0 0 -1em, 2em 2em 0 0em, 0 3em 0 0.2em, 
+     -2em 2em 0 0, -3em 0em 0 -1em, -2em -2em 0 -1em;
+  }
+  62.5% {
+    box-shadow: 0 -3em 0 -1em, 2em -2em 0 -1em,
+     3em 0 0 -1em, 2em 2em 0 -1em, 0 3em 0 0, 
+     -2em 2em 0 0.2em, -3em 0 0 0, -2em -2em 0 -1em;
+  }
+  75% {
+    box-shadow: 0em -3em 0 -1em, 2em -2em 0 -1em, 
+    3em 0em 0 -1em, 2em 2em 0 -1em, 0 3em 0 -1em, 
+    -2em 2em 0 0, -3em 0em 0 0.2em, -2em -2em 0 0;
+  }
+  87.5% {
+    box-shadow: 0em -3em 0 0, 2em -2em 0 -1em, 
+    3em 0 0 -1em, 2em 2em 0 -1em, 0 3em 0 -1em, 
+    -2em 2em 0 0, -3em 0em 0 0, -2em -2em 0 0.2em;
+  }
+}
+  
