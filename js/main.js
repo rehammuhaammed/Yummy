@@ -46,17 +46,21 @@ async function getData() {
 
 //  -------------------------------------Start Side bar-------------------------------------------
 function openSideBar() {
-   $(".sidebar").animate({ left: `0px` }, 500, function () {
-      // $('.leftside .linkes li ').animate({top:'0px'},500)
-    });
-    $(".baricon").removeClass("fa-align-justify");
-    $(".baricon").addClass("fa-x");
+   $(".sidebar").animate({ left: `0px` }, 500)
+   for (let i = 0; i < 5; i++) {
+       $('.leftside .linkes li ').eq(i).animate({top:'0px'},(i+5)*100)
+     }
+    $(".baricon").removeClass("fa-align-justify").addClass("fa-x");
      isclose = false;
 }
  function closeSidebar() {
-   $(".sidebar").animate({ left: `-${leftsideWidth}px` }, 500);
+   $(".sidebar").animate({ left: `-${leftsideWidth}px` }, 500,function () {
+    $('.leftside .linkes li ').animate({top:'300px'})
+   });
+   
     $(".baricon").addClass("fa-align-justify");
     $(".baricon").removeClass("fa-x");
+
      isclose = true;
  }
 function hide() {

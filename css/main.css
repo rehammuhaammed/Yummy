@@ -35,7 +35,7 @@ li {
 }
 .sidebar .leftside .linkes li {
   position: relative;
-  /* top: 300px; */
+  top: 300px;
 }
 .sidebar .iconside .logo {
   width: 50px;
@@ -236,3 +236,4 @@ li {
   }
 }
   
+
