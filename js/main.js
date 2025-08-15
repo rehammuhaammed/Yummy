@@ -331,7 +331,7 @@ function displayArea() {
   for (let i = 0; i < areaData.meals.length; i++) {
     cartona += `
         <div class="col">
-          <div class="inner text-center text-white" data-id="${areaData.meals[i].strArea}">
+          <div class="inner text-center " data-id="${areaData.meals[i].strArea}">
           <i class="fa-solid fa-house-laptop fa-4x"></i>
           <h3>${areaData.meals[i].strArea}</h3>
         </div>
@@ -400,7 +400,7 @@ function displayIngredient() {
     let Description=IngredientData.meals[i].strDescription.split(" ").slice(0, 20).join(" ")
     cartona += `
        <div class="col">
-          <div class="inner text-center text-white " data-id="${IngredientData.meals[i].strIngredient}">
+          <div class="inner text-center  " data-id="${IngredientData.meals[i].strIngredient}">
               <i class="fa-solid fa-drumstick-bite fa-4x"></i>
               <h3>${IngredientData.meals[i].strIngredient}</h3>
               <p>${Description}</p>
