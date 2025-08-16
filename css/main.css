@@ -1,7 +1,14 @@
+
 body {
-  background-image: url(../images/bg.jpg);
+  margin:0 ;
+  padding: 0;
+  min-height: 100vh;
+  background: linear-gradient(
+      rgba(249, 246, 246, 0.3)
+    ),
+    url(../images/bg3.jpg) no-repeat center center fixed;
   background-size: cover;
-  background-repeat: no-repeat;
+  background-position: center;
   position: relative;
   overflow: hidden;
   color: black;
@@ -19,7 +26,19 @@ li {
 
 .title h1{
    font-family: "Edu NSW ACT Cursive", cursive;
+     background: linear-gradient(to right, #513535, #010100);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  cursor: default;
 }
+.title h1 span {
+  background: none;
+  background-clip: initial;
+  -webkit-text-fill-color: initial;
+  color: inherit; 
+}
+
 .sidebar {
   width: 250px;
   min-height: 100vh;
@@ -32,6 +51,9 @@ li {
 }
 .sidebar .yummy {
   cursor: pointer;
+}
+.sidebar .iconside .logo {
+  width: 50px;
 }
 .sidebar .leftside {
   width: 66%;
@@ -49,9 +71,7 @@ li {
   transition: all ease-in 0.2s ;
   scale: 105%;
 }
-.sidebar .iconside .logo {
-  width: 50px;
-}
+
 .sidebar .iconside i {
   color: black;
 }
@@ -100,7 +120,7 @@ li {
 .inner .meal-layer {
   width: 100%;
   height: 100%;
-  background-color: #f9f6f6ca;
+  background-color: rgba(249, 246, 246, 0.792);
   position: absolute;
   display: flex;
   flex-direction: column;
