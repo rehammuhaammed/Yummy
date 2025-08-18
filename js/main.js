@@ -463,14 +463,12 @@ $("#ContactUs").on("click", function () {
 });
 //  ------------------------------------------- validete  -------------------------------------------
 
-// دالة للتحقق من كل الحقول مرة واحدة
+
 function checkAllInputs() {
   return validateName($('#Name').val()) &&
          validateEmail($('#Email').val()) &&
          validatePhone($('#Phone').val()) &&
-         validateAge($('#Age').val()) &&
-         validatePassword($('#Password').val()) &&
-         validatePassword($('#Repassword').val());
+         validateAge($('#Age').val()) 
 }
 
 function updateSubmitButton() {
@@ -491,7 +489,7 @@ $('#Name').on('input', function() {
   updateSubmitButton();
 });
 
-// نفس الكلام يتكرر لكل الحقول
+
 $('#Email').on('input', function() {
   if(validateEmail($(this).val())){
     $(this).siblings(".alert").addClass("d-none").removeClass("d-block");
@@ -519,23 +517,6 @@ $('#Age').on('input', function() {
   updateSubmitButton();
 });
 
-$('#Password').on('input', function() {
-  if(validatePassword($(this).val())){
-    $(this).siblings(".alert").addClass("d-none").removeClass("d-block");
-  } else {
-    $(this).siblings(".alert").removeClass("d-none").addClass("d-block");
-  }
-  updateSubmitButton();
-});
-
-$('#Repassword').on('input', function() {
-  if(validatePassword($(this).val()) && $('#Repassword').val() === $('#Password').val()){
-    $(this).siblings(".alert").addClass("d-none").removeClass("d-block");
-  } else {
-    $(this).siblings(".alert").removeClass("d-none").addClass("d-block");
-  }
-  updateSubmitButton();
-});
 
  function validateName(name) {
     return /^[a-zA-Z ]+$/.test(name.trim());
@@ -553,6 +534,3 @@ function validateAge(age) {
     return /^\d+$/.test(age) && age >= 10 && age <= 100;
 }
 
-function validatePassword(password) {
-    return /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/.test(password);
-}
